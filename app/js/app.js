@@ -21,4 +21,18 @@ angular.module('myApp', ['myApp.filters',
     	.otherwise({redirectTo: '/'});
 
      $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-  }]);
+  }])
+
+
+.run(function ($location, $rootScope, AUTH_EVENTS){
+  $rootScope.$on('$locationChangeStart', function (event, next, current) {
+
+    var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+    //var loggedIn = $rootScope.globals.currentUser;
+    if (restrictedPage && !$rootScope.authenticated) {
+                $location.path('/login');
+    }
+  });
+
+})
+;
