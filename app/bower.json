@@ -15,7 +15,19 @@
     "tests"
   ],
   "dependencies": {
+    "angular-cookie": "~4.0.9",
+    "angular-cookies": "~1.4.5",
+    "angular-csrf-cross-domain": "~0.0.3",
+    "angular-http-auth": "~1.2.2",
+    "angular-local-storage": "~0.2.2",
+    "angular-messages": "~1.4.5",
     "angular-resource": "~1.4.5",
-    "angular-route": "~1.4.5"
+    "angular-route": "~1.4.5",
+    "angular-ui-router": "~0.2.15",
+    "angularjs-modal-service": "*"
+  },
+  "resolutions": {
+    "angular": "~1.4.5",
+    "angular-cookies": "~1.4.5"
   }
 }
